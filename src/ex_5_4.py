@@ -19,3 +19,6 @@ output_file = output_dir / "ex_5_4-processed.csv"
 # Process the input data using numpy
 
 # Save the result to output_file
+data = np.loadtxt(infile, delimiter=',')
+data[data < 0] = 0
+np.savetxt(outfile, data, delimiter=',')
